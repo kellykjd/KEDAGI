@@ -6,15 +6,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    //EDITE EL MAIN!
-    //GIGI ;)
-    //QUE EXPLOTE TADAAAAAAA! BRUM
-    //algo en el 11
-    //ALOHA!
-
-    //jfjfijsffshsfidhifdhgid
-    
-    //PUTO EL QUE LEE
 
 
     
@@ -23,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ///primer comentario
+
     }
 }

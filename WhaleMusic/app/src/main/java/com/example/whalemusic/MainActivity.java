@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
     //EDITE EL MAIN!
     //GIGI ;)
 
-    //PERFECTIRIJILLO
+    
     
     //PUTO EL QUE LEE
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.NotificadorActivity {
 
-
-
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

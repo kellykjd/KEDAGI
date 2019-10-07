@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#333"
-    >
+    android:background="#333">
 
     <FrameLayout
         android:layout_width="match_parent"

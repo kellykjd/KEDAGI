@@ -1,3 +1,4 @@
+/*
 package com.example.whalemusic;
 
 import android.view.LayoutInflater;
@@ -60,3 +61,4 @@ public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolder
         }
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.example.whalemusic;
 
 
@@ -12,9 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+*/
 /**
  * A simple {@link Fragment} subclass.
- */
+ *//*
+
 public class FragmentGeneros extends Fragment {
 
     private RecyclerView recyclerViewGeneros;
@@ -46,3 +49,4 @@ public class FragmentGeneros extends Fragment {
         recyclerViewGeneros.setAdapter(adadapterGenero);
     }
 }
+*/

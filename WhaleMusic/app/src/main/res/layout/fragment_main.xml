@@ -27,7 +27,6 @@
         android:textColor="#FFF"
         android:gravity="center"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -38,62 +37,64 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="30dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_rock"
                 style="@style/CheckBox"
                 android:background="@drawable/rock"
-
-                android:text="Rock"/>
+                android:text="Rock" />
 
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_pop"
                 style="@style/CheckBox"
-                android:text="Pop"
-                android:background="@drawable/pop"/>
+                android:background="@drawable/pop"
+                android:text="Pop" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="30dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_indie"
                 style="@style/CheckBox"
                 android:background="#2E9B30"
-                android:text="Indie"/>
+                android:text="Indie" />
+
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_reggae"
                 style="@style/CheckBox"
                 android:background="#FF9800"
-                android:text="Reggae"/>
+                android:text="Reggae" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="30dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_country"
                 style="@style/CheckBox"
                 android:background="#7884A5"
-                android:text="Country"/>
+                android:text="Country" />
 
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_metal"
                 style="@style/CheckBox"
                 android:background="#003796"
-                android:text="Latinas"/>
+                android:text="Latinas" />
         </LinearLayout>
     </LinearLayout>
 

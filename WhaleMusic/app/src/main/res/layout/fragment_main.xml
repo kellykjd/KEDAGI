@@ -51,7 +51,7 @@
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_pop"
                 style="@style/CheckBox"
-                android:background="#552BA2"
+                android:background="@drawable/pop"
                 android:text="Pop" />
         </LinearLayout>
 
@@ -66,13 +66,13 @@
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_indie"
                 style="@style/CheckBox"
-                android:background="#2E9B30"
+                android:background="@drawable/indie"
                 android:text="Indie" />
 
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_reggae"
                 style="@style/CheckBox"
-                android:background="#FF9800"
+                android:background="@drawable/reggae"
                 android:text="Reggae" />
         </LinearLayout>
 
@@ -87,13 +87,13 @@
             <CheckBox
                 android:id="@+id/MainFragment_checkBox_country"
                 style="@style/CheckBox"
-                android:background="#7884A5"
+                android:background="@drawable/country"
                 android:text="Country" />
 
             <CheckBox
-                android:id="@+id/MainFragment_checkBox_metal"
+                android:id="@+id/MainFragment_checkBox_latinas"
                 style="@style/CheckBox"
-                android:background="#003796"
+                android:background="@drawable/latina"
                 android:text="Latinas" />
         </LinearLayout>
     </LinearLayout>

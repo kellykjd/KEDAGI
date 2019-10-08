@@ -26,7 +26,7 @@ public class MainFragment extends Fragment {
     private CheckBox checkBoxIndie;
     private CheckBox checkBoxReggae;
     private CheckBox checkBoxCountry;
-    private CheckBox checkBoxMetal;
+    private CheckBox checkBoxLatinas;
     private Button buttonSkip;
     private NotificadorActivity listener;
 
@@ -66,7 +66,7 @@ public class MainFragment extends Fragment {
         checkBoxIndie = view.findViewById(R.id.MainFragment_checkBox_indie);
         checkBoxReggae = view.findViewById(R.id.MainFragment_checkBox_reggae);
         checkBoxCountry = view.findViewById(R.id.MainFragment_checkBox_country);
-        checkBoxMetal = view.findViewById(R.id.MainFragment_checkBox_metal);
+        checkBoxLatinas = view.findViewById(R.id.MainFragment_checkBox_latinas);
         buttonSkip = view.findViewById(R.id.MainFragment_button_skip);
     }
 
@@ -97,7 +97,7 @@ public class MainFragment extends Fragment {
         if (checkBoxCountry.isChecked()){
             generos.add("Country");
         }
-        if (checkBoxMetal.isChecked()){
+        if (checkBoxLatinas.isChecked()){
             generos.add("Metal");
         }
         return generos;

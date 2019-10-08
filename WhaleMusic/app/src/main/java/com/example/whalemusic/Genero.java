@@ -1,4 +1,4 @@
-/*
+
 package com.example.whalemusic;
 
 public class Genero {
@@ -30,4 +30,3 @@ public class Genero {
         return imagen;
     }
 }
-*/

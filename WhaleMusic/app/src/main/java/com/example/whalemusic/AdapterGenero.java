@@ -1,4 +1,4 @@
-/*
+
 package com.example.whalemusic;
 
 import android.view.LayoutInflater;
@@ -20,10 +20,10 @@ public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolder
 
     @NonNull
     @Override
-    public ViewHolderGenero onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+    public ViewHolderGenero onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        LayoutInflater inflador = LayoutInflater.from(ViewGroup.getContext());
-        View view = inflador.inflate(R.layout.layoutgenero, viewGroup, false);
+        LayoutInflater inflador = LayoutInflater.from(parent.getContext());
+        View view = inflador.inflate(R.layout.layoutgenero, parent, false);
         ViewHolderGenero viewHolderGenero = new ViewHolderGenero(view);
         return viewHolderGenero;
     }
@@ -31,8 +31,7 @@ public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolderGenero holder, int position) {
         Genero unGeneroDeLaLista = this.listaDeGeneros.get(position);
-        ViewHolderGenero viewHolderGenero = (ViewHolderGenero) viewHolder;
-        viewHolderGenero.bindGenero(unGeneroDeLaLista);
+        holder.cargarGenero(unGeneroDeLaLista);
     }
 
     @Override
@@ -61,4 +60,3 @@ public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolder
         }
     }
 }
-*/

@@ -38,7 +38,7 @@ public class FragmentGeneros extends Fragment {
         recyclerViewGeneros.findViewById(R.id.fragmentGeneros_recyclerView);
 
         //creo el layout manager que es el que indica como se ve y como se escrolea la lista
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
 
         //creo el adapter, el metodo que genera la lista lo saco afuera para que no ensucie el codigo
         //el dia de mañana esa lista va a venir de un servicio no va a esta harcodeada
@@ -56,12 +56,12 @@ public class FragmentGeneros extends Fragment {
     private List<Genero> generateList(){
         List<Genero> listaDeGeneros = new ArrayList<>();
 
-        listaDeGeneros.add(new Genero("HipHop", 1));
-        listaDeGeneros.add(new Genero("Cumbia Villera", 1));
-        listaDeGeneros.add(new Genero("Reggae", 1));
-        listaDeGeneros.add(new Genero("Musica Clasica", 1));
-        listaDeGeneros.add(new Genero("Punk", 1));
-        listaDeGeneros.add(new Genero("Rock", 1));
+        listaDeGeneros.add(new Genero("HipHop", R.drawable.HipHop));
+        listaDeGeneros.add(new Genero("Cumbia Villera", R.drawable.CumbiaVillera));
+        listaDeGeneros.add(new Genero("Folklore", R.drawable.Folklore));
+        listaDeGeneros.add(new Genero("Reggaeton", R.drawable.Reggaeton));
+        listaDeGeneros.add(new Genero("Punk", R.drawable.Punk));
+        listaDeGeneros.add(new Genero("Psico Trance", R.drawable.PsicoTrance));
 
         return listaDeGeneros;
     }

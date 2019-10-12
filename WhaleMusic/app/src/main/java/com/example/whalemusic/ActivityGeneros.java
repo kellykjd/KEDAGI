@@ -29,5 +29,9 @@ public class ActivityGeneros extends AppCompatActivity {
         fragmentTransaction.addToBackStack(null);
         //Ejecuto la transaccion
         fragmentTransaction.commit();
+
+
+
+
     }
 }

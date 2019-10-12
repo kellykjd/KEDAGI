@@ -57,6 +57,7 @@ public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolder
         //metodo que le enseña al view holder a cargar un objeto en este caso el villano
         public void cargarGenero (Genero genero){
             this.textViewGenero.setText(genero.getNombre());
+            imageViewGenero.setImageResource(genero.getImagen());
         }
     }
 }

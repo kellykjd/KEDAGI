@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="#333"
-    >
+    android:layout_height="170dp"
+    android:background="#333">
     
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewGenero"
         android:src="@mipmap/ic_launcher_round"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2"/>
+        android:layout_weight="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginVertical="10dp"
+        android:fadingEdge="horizontal"
+        app:civ_border_width="10dp"
+        app:civ_border_color="#8BC34A"
+        android:fadingEdgeLength="20dp"
+        android:outlineAmbientShadowColor="#000"
+
+        />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -22,14 +30,16 @@
         android:gravity="center">
         <TextView
             android:id="@+id/layoutgenero_textView_genero"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre genero"
+            android:text="Cumbia Villera"
             android:textAllCaps="true"
             android:textColor="#999"
-            android:textSize="20sp"
+            android:textSize="35sp"
             android:gravity="center"
-            android:background="#666"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+
             />
     </LinearLayout>
 

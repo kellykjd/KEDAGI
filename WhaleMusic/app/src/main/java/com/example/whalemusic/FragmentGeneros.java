@@ -38,14 +38,14 @@ public class FragmentGeneros extends Fragment {
         recyclerViewGeneros.findViewById(R.id.fragmentGeneros_recyclerView);
 
         //creo el layout manager que es el que indica como se ve y como se escrolea la lista
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2, RecyclerView.VERTICAL, false);
 
         //creo el adapter, el metodo que genera la lista lo saco afuera para que no ensucie el codigo
         //el dia de mañana esa lista va a venir de un servicio no va a esta harcodeada
         AdapterGenero adapterGenero = new AdapterGenero(generateList());
 
         //le seteo ek adapter al recycler
-        recyclerViewGeneros.setLayoutManager(layoutManager);
+        recyclerViewGeneros.setLayoutManager(gridLayoutManager);
 
         //le seteo el layout manager
         recyclerViewGeneros.setAdapter(adapterGenero);
@@ -56,12 +56,12 @@ public class FragmentGeneros extends Fragment {
     private List<Genero> generateList(){
         List<Genero> listaDeGeneros = new ArrayList<>();
 
-        listaDeGeneros.add(new Genero("HipHop", R.drawable.HipHop));
-        listaDeGeneros.add(new Genero("Cumbia Villera", R.drawable.CumbiaVillera));
-        listaDeGeneros.add(new Genero("Folklore", R.drawable.Folklore));
-        listaDeGeneros.add(new Genero("Reggaeton", R.drawable.Reggaeton));
-        listaDeGeneros.add(new Genero("Punk", R.drawable.Punk));
-        listaDeGeneros.add(new Genero("Psico Trance", R.drawable.PsicoTrance));
+        listaDeGeneros.add(new Genero("HipHop", R.drawable.hiphop));
+        listaDeGeneros.add(new Genero("Cumbia Villera", R.drawable.cumbiavillera));
+        listaDeGeneros.add(new Genero("Folklore", R.drawable.folklore));
+        listaDeGeneros.add(new Genero("Reggaeton", R.drawable.reggaeton));
+        listaDeGeneros.add(new Genero("Punk", R.drawable.punk));
+        listaDeGeneros.add(new Genero("Psico Trance", R.drawable.psicotrance));
 
         return listaDeGeneros;
     }

@@ -1,5 +1,5 @@
 
-package com.example.whalemusic;
+package com.example.whalemusic.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.whalemusic.model.Genero;
+import com.example.whalemusic.R;
+
 import java.util.List;
 
 public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolderGenero> {
@@ -61,3 +65,4 @@ public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolder
         }
     }
 }
+

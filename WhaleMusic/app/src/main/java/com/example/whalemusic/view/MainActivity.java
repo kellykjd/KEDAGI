@@ -1,12 +1,13 @@
 
 
-package com.example.whalemusic;
+package com.example.whalemusic.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.whalemusic.R;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Noti
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         pegarFragment(new MainFragment());

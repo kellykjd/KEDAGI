@@ -1,4 +1,4 @@
-package com.example.whalemusic;
+package com.example.whalemusic.view;
 
 
 import android.content.Context;
@@ -11,6 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
+
+import com.example.whalemusic.R;
+import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +32,8 @@ public class MainFragment extends Fragment {
     private CheckBox checkBoxReggae;
     private CheckBox checkBoxCountry;
     private CheckBox checkBoxLatinas;
-    private Button buttonSkip;
+    private Button buttonSaltar;
+    private Button buttonContinuar;
     private NotificadorActivity listener;
 
     public MainFragment() {
@@ -39,25 +45,40 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View viewMainFragment = inflater.inflate(R.layout.fragment_main, container, false);
+        final View viewMainFragment = inflater.inflate(R.layout.fragment_main, container, false);
         encontrarVistas(viewMainFragment);
+        checkBoxPop.setOnCheckedChangeListener(new Chk_class());
+        checkBoxIndie.setOnCheckedChangeListener(new Chk_class());
+        checkBoxReggae.setOnCheckedChangeListener(new Chk_class());
+        checkBoxCountry.setOnCheckedChangeListener(new Chk_class());
+        checkBoxRock.setOnCheckedChangeListener(new Chk_class());
+        checkBoxLatinas.setOnCheckedChangeListener(new Chk_class());
 
-        buttonSkip.setOnClickListener(new View.OnClickListener() {
+        buttonSaltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listener.recibirGeneros(seleccionDeGeneros());
             }
         });
 
-
-
-
-
-
-
-
-
         return viewMainFragment;
+    }
+
+    class Chk_class implements CompoundButton.OnCheckedChangeListener{
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+
+            if(checkBoxPop.isChecked()||checkBoxCountry.isChecked()||checkBoxIndie.isChecked()||checkBoxLatinas.isChecked()||checkBoxRock.isChecked()||checkBoxReggae.isChecked())
+            {
+                buttonContinuar.setVisibility(View.VISIBLE);
+                buttonSaltar.setVisibility(View.INVISIBLE);
+            }else{
+                buttonContinuar.setVisibility(View.INVISIBLE);
+                buttonSaltar.setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     private void encontrarVistas(View view){
@@ -67,7 +88,8 @@ public class MainFragment extends Fragment {
         checkBoxReggae = view.findViewById(R.id.MainFragment_checkBox_reggae);
         checkBoxCountry = view.findViewById(R.id.MainFragment_checkBox_country);
         checkBoxLatinas = view.findViewById(R.id.MainFragment_checkBox_latinas);
-        buttonSkip = view.findViewById(R.id.MainFragment_button_skip);
+        buttonSaltar = view.findViewById(R.id.MainFragment_button_saltar);
+        buttonContinuar = view.findViewById(R.id.MainFragment_button_continuar);
     }
 
     @Override
@@ -79,6 +101,7 @@ public class MainFragment extends Fragment {
     public interface NotificadorActivity{
         public void recibirGeneros(List<String> generos);
     }
+
 
     private List<String> seleccionDeGeneros(){
         List<String> generos = new ArrayList<>();

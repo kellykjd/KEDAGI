@@ -1,5 +1,5 @@
 
-package com.example.whalemusic;
+package com.example.whalemusic.model;
 
 public class Genero {
 

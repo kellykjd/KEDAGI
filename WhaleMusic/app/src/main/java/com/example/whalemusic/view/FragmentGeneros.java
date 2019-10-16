@@ -1,25 +1,27 @@
 
-package com.example.whalemusic;
+package com.example.whalemusic.view;
 
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.whalemusic.model.Genero;
+import com.example.whalemusic.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
+// A simple {@link Fragment} subclass.
+
 
 public class FragmentGeneros extends Fragment {
 
@@ -32,7 +34,7 @@ public class FragmentGeneros extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View miView = inflater.inflate(R.layout.fragment_fragment_generos, container, false);
+        View miView = inflater.inflate(R.layout.fragment_generos, container, false);
 
         // encuentro el recycler view
         recyclerViewGeneros.findViewById(R.id.fragmentGeneros_recyclerView);

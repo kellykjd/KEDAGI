@@ -23,18 +23,18 @@ import java.util.List;
 // A simple {@link Fragment} subclass.
 
 
-public class FragmentGeneros extends Fragment {
+public class FragmentDetalleGenero extends Fragment {
 
     private RecyclerView recyclerViewGeneros;
 
-    public FragmentGeneros() {
+    public FragmentDetalleGenero() {
         // Required empty public constructor
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View miView = inflater.inflate(R.layout.fragment_generos, container, false);
+        View miView = inflater.inflate(R.layout.fragment_detalle_genero, container, false);
 
         // encuentro el recycler view
         recyclerViewGeneros.findViewById(R.id.fragmentGeneros_recyclerView);

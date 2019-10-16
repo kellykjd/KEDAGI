@@ -11,7 +11,7 @@ import com.example.whalemusic.R;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.NotificadorActivity {
+public class MainActivity extends AppCompatActivity implements FragmentMain.NotificadorActivity {
 
     
     @Override
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Noti
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pegarFragment(new MainFragment());
+        pegarFragment(new FragmentMain());
 
     }
 

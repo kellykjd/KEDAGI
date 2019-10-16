@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="170dp"
     android:background="#333">
-    
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewGenero"
         android:src="@mipmap/ic_launcher_round"

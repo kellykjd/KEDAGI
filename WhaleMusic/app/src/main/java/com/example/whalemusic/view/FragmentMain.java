@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class FragmentMain extends Fragment {
 
     private CheckBox checkBoxRock;
     private CheckBox checkBoxPop;
@@ -36,7 +36,7 @@ public class MainFragment extends Fragment {
     private Button buttonContinuar;
     private NotificadorActivity listener;
 
-    public MainFragment() {
+    public FragmentMain() {
         // Required empty public constructor
     }
 

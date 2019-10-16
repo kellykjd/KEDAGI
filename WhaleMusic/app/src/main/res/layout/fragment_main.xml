@@ -7,16 +7,14 @@
     android:orientation="vertical"
     android:background="#333"
     android:id="@+id/MainFragment"
-    tools:context=".view.MainFragment">
+    tools:context=".view.FragmentMain">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="66dp"
-        android:layout_height="66dp"
-        android:src="@drawable/logo"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:src="@drawable/logo"
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -32,7 +30,8 @@
         android:layout_height="0dp"
         android:layout_weight="4"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,14 +108,16 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="SALTAR"
-            android:backgroundTint="#FFC107"
+            android:textColor="#6b88a3"
+            android:backgroundTint="#711c82"
             android:background="@drawable/button_rounded"/>
         <Button
             android:id="@+id/MainFragment_button_continuar"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="CONTINUAR"
-            android:backgroundTint="#FFC107"
+                android:backgroundTint="#711c82"
+                android:textColor="#6b88a3"
             android:background="@drawable/button_rounded"
             android:layout_marginLeft="100dp"
             android:visibility="invisible"/>

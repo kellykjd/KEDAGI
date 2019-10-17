@@ -8,16 +8,16 @@ public class Genero {
 
     private String nombre;
     private Integer imagen;
-    private List<Artista> artistas;
+    private String artistas;
 
     public Genero(){
 
     }
 
-    public Genero(String nombre, Integer imagen, List<Artista> artistas){
+    public Genero(String nombre, Integer imagen, String artistas){
         this.nombre = nombre;
         this.imagen = imagen;
-        this.artistas = new ArrayList<>();
+        this.artistas = artistas;
     }
 
     public String getNombre() {
@@ -36,11 +36,11 @@ public class Genero {
         this.imagen = imagen;
     }
 
-    public List<Artista> getArtistas() {
+    public String getArtistas() {
         return artistas;
     }
 
-    public void setArtistas(List<Artista> artistas) {
+    public void setArtistas(String artistas) {
         this.artistas = artistas;
     }
 }

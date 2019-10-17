@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FragmentDetalleCancion">
+    tools:context=".view.FragmentDetalleCancion"
+    android:orientation="vertical"
+    android:background="#333"
+    android:gravity="center">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/fragmentDetalleCancion_TextView_nombre"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        tools:text="Nombre cancion"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#6b88a3"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/fragmentDetalleCancion_TextView_artista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Artista"
+        android:gravity="center"
+        android:textColor="#6b88a3"/>
+    <TextView
+        android:id="@+id/fragmentDetalleCancion_TextView_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Album"
+        android:gravity="center"
+        android:textColor="#6b88a3"/>
+    <TextView
+        android:id="@+id/fragmentDetalleCancion_TextView_año"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Año"
+        android:gravity="center"
+        android:textColor="#6b88a3"/>
+
+
+</LinearLayout>

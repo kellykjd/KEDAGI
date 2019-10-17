@@ -12,57 +12,74 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.whalemusic.model.Genero;
 import com.example.whalemusic.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolderGenero> {
+public class AdapterGenero extends RecyclerView.Adapter<AdapterGenero.ViewHolderGenero>{
 
-    private List<Genero> listaDeGeneros;
+private List<Genero> generoList;
+private ListenerDelAdapterGenero listenerDelAdapterGenero;
 
-    public AdapterGenero (List<Genero>listaDeGeneros){
-        this.listaDeGeneros = listaDeGeneros;
-    }
-
-    @NonNull
-    @Override
-    public ViewHolderGenero onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        LayoutInflater inflador = LayoutInflater.from(parent.getContext());
-        View view = inflador.inflate(R.layout.layoutgenero, parent, false);
-        ViewHolderGenero viewHolderGenero = new ViewHolderGenero(view);
-        return viewHolderGenero;
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolderGenero holder, int position) {
-        Genero unGeneroDeLaLista = this.listaDeGeneros.get(position);
-        holder.cargarGenero(unGeneroDeLaLista);
-    }
-
-    @Override
-    public int getItemCount() {
-        return this.listaDeGeneros.size();
-    }
-
-    public class ViewHolderGenero extends RecyclerView.ViewHolder {
-        private TextView textViewGenero;
-        private ImageView imageViewGenero;
-        private Genero generoDeLaCelda;
-
-        public ViewHolderGenero(@NonNull View itemView) {
-            //EL ITEMVIEW ES LA CELDA DE LA LISTA
-
-            super(itemView);
-            //en la vista de la celda encuentro todos los componentes
-
-            imageViewGenero = itemView.findViewById(R.id.imageViewGenero);
-            textViewGenero = itemView.findViewById(R.id.layoutgenero_textView_genero);
+public AdapterGenero(List<Genero> generoList) {
+        this.generoList = generoList;
         }
 
-        //metodo que le enseña al view holder a cargar un objeto en este caso el villano
-        public void cargarGenero (Genero genero){
-            this.textViewGenero.setText(genero.getNombre());
-            imageViewGenero.setImageResource(genero.getImagen());
+public AdapterGenero(ListenerDelAdapterGenero listenerDelAdapterGenero) {
+        generoList = new ArrayList<>();
+        this.listenerDelAdapterGenero = listenerDelAdapterGenero;
         }
+
+@NonNull
+@Override
+public ViewHolderGenero onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View vistaDeLaCelda =layoutInflater.inflate(R.layout.celda_genero,parent,false);
+        return new ViewHolderGenero(vistaDeLaCelda);
+        }
+
+@Override
+public void onBindViewHolder(@NonNull ViewHolderGenero holder, int position) {
+        Genero generoMostrado = generoList.get(position);
+        holder.cargarGenero(generoMostrado);
+
+        }
+
+@Override
+public int getItemCount() {
+        return generoList.size();
+        }
+
+public void setGeneroList(List<Genero> generoList){
+        this.generoList = generoList;
+        notifyDataSetChanged();
+        }
+
+
+public class ViewHolderGenero extends RecyclerView.ViewHolder{
+    private TextView textViewNombre;
+    private ImageView imageViewFoto;
+
+
+    public ViewHolderGenero(@NonNull View itemView) {
+        super(itemView);
+        textViewNombre = itemView.findViewById(R.id.celdaGenero_textView_nombre);
+        imageViewFoto = itemView.findViewById(R.id.celdaGenero_imageView_foto);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Genero generoSeleccionado = generoList.get(getAdapterPosition());
+                listenerDelAdapterGenero.informarGeneroSeleccionado(generoSeleccionado);
+            }
+        });
+    }
+
+    public void cargarGenero(Genero genero){
+        textViewNombre.setText(genero.getNombre());
+        imageViewFoto.setImageResource(genero.getImagen());
     }
 }
 
+public interface ListenerDelAdapterGenero{
+    public void informarGeneroSeleccionado(Genero genero);
+}
+}

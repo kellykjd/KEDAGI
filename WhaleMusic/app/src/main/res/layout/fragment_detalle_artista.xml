@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FragmentDetalleArtista">
+    tools:context=".view.FragmentDetalleArtista"
+    android:orientation="vertical"
+    android:background="#333">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/fragmentDetalleArtista_ImageView_foto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="10dp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/fragmentDetalleArtista_TextView_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Nombre artista"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#6b88a3"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TextView
+            android:id="@+id/fragmentDetalleArtista_TextView_biografía"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Biografia artista"
+            android:gravity="center"
+            android:textColor="#6b88a3"/>
+    </ScrollView>
+
+</LinearLayout>

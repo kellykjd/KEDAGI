@@ -11,9 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.whalemusic.model.Genero;
 import com.example.whalemusic.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,46 +29,34 @@ import java.util.List;
 
 public class FragmentDetalleGenero extends Fragment {
 
-    private RecyclerView recyclerViewGeneros;
+public static final String CLAVE_GENERO = "claveGenero";
+private TextView textViewNombre;
+private ImageView imageViewFoto;
+private TextView textViewArtistas;
 
-    public FragmentDetalleGenero() {
-        // Required empty public constructor
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View miView = inflater.inflate(R.layout.fragment_detalle_genero, container, false);
+        View view = inflater.inflate(R.layout.fragment_detalle_genero, container, false);
+        encontrarVistas(view);
+        Bundle bundle = getArguments();
+        Genero generoSeleccionado = (Genero) bundle.getSerializable(CLAVE_GENERO);
+        imageViewFoto.setImageResource(generoSeleccionado.getImagen());
+        textViewNombre.setText(generoSeleccionado.getNombre());
+        textViewArtistas.setText(generoSeleccionado.getArtistas());
 
-        // encuentro el recycler view
-        recyclerViewGeneros.findViewById(R.id.fragmentGeneros_recyclerView);
 
-        //creo el layout manager que es el que indica como se ve y como se escrolea la lista
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2, RecyclerView.VERTICAL, false);
 
-        //creo el adapter, el metodo que genera la lista lo saco afuera para que no ensucie el codigo
-        //el dia de mañana esa lista va a venir de un servicio no va a esta harcodeada
-        AdapterGenero adapterGenero = new AdapterGenero(generateList());
+        return view;
 
-        //le seteo ek adapter al recycler
-        recyclerViewGeneros.setLayoutManager(gridLayoutManager);
-
-        //le seteo el layout manager
-        recyclerViewGeneros.setAdapter(adapterGenero);
-
-        return miView;
     }
 
-    private List<Genero> generateList(){
-        List<Genero> listaDeGeneros = new ArrayList<>();
 
-        listaDeGeneros.add(new Genero("HipHop", R.drawable.hiphop));
-        listaDeGeneros.add(new Genero("Cumbia Villera", R.drawable.cumbiavillera));
-        listaDeGeneros.add(new Genero("Folklore", R.drawable.folklore));
-        listaDeGeneros.add(new Genero("Reggaeton", R.drawable.reggaeton));
-        listaDeGeneros.add(new Genero("Punk", R.drawable.punk));
-        listaDeGeneros.add(new Genero("Psico Trance", R.drawable.psicotrance));
-
-        return listaDeGeneros;
+    private void encontrarVistas(View view){
+        imageViewFoto = view.findViewById(R.id.fragmentDetalleGenero_ImageView_foto);
+        textViewNombre = view.findViewById(R.id.fragmentDetalleGenero_TextView_nombre);
+        textViewArtistas = view.findViewById(R.id.fragmentDetalleGenero_TextView_listaArtistas);
     }
+
 }

@@ -45,13 +45,8 @@ private TextView textViewArtistas;
         imageViewFoto.setImageResource(generoSeleccionado.getImagen());
         textViewNombre.setText(generoSeleccionado.getNombre());
         textViewArtistas.setText(generoSeleccionado.getArtistas());
-
-
-
         return view;
-
     }
-
 
     private void encontrarVistas(View view){
         imageViewFoto = view.findViewById(R.id.fragmentDetalleGenero_ImageView_foto);

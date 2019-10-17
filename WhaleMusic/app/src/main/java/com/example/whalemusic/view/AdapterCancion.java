@@ -73,7 +73,7 @@ public class AdapterCancion extends RecyclerView.Adapter<AdapterCancion.ViewHold
         }
 
         public void cargarCancion(Cancion cancion){
-            textViewNombre.setText(cancion.getNombre());
+            textViewNombre.setText(cancion.getNombre()+" - ");
             textViewArtista.setText(cancion.getArtista());
         }
     }

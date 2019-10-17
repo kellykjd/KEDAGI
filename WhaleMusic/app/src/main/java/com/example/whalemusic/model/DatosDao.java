@@ -43,16 +43,16 @@ public class DatosDao {
     public void traerCanciones(ResultListener<List<Cancion>> listenerDelControllerCancion){
         List<Cancion> canciones= new ArrayList<>();
         canciones.add(new Cancion("Goteo","Duki","Goteo",2019));
-        canciones.add(new Cancion("Yo x Ti tú x mi","Ozuna, Rosalía","Yo x Ti tú x mi",2019));
-        canciones.add(new Cancion("Fresa","Lalo Ebratt, Tini","Fresa",2019));
-        canciones.add(new Cancion("Tutu","Camilo, Pedro Capó","Tutu",2019));
-        canciones.add(new Cancion("No se me quita","Maluma, Ricky Martin","11:11",2019));
-        canciones.add(new Cancion("Señorita","Camila Cabello, Shawn Mendes","Señorita",2019));
-        canciones.add(new Cancion("Nothing on you","Ed Sheeran, Dave, Paulo Londra","No. 6 collaborations project",2019));
-        canciones.add(new Cancion("Boy with luv","BTS, Halsey","Map of the soul",2019));
-        canciones.add(new Cancion("Mi persona favorita","Alejandro Sanz, Camila Cabello","#ELDISCO",2019));
-        canciones.add(new Cancion("Circles","Pos Malone","Hollywood's Bleeding",2019));
-        canciones.add(new Cancion("Slide away","Miley Cyru","Slide away",2019));
+        canciones.add(new Cancion("Yo x Ti tú x mi","Ozuna, Rosalía","Yo x Ti tú x mi",2000));
+        canciones.add(new Cancion("Fresa","Lalo Ebratt, Tini","Fresa",2000));
+        canciones.add(new Cancion("Tutu","Camilo, Pedro Capó","Tutu",2000));
+        canciones.add(new Cancion("No se me quita","Maluma, Ricky Martin","11:11",2000));
+        canciones.add(new Cancion("Señorita","Camila Cabello, Shawn Mendes","Señorita",2000));
+        canciones.add(new Cancion("Nothing on you","Ed Sheeran, Dave, Paulo Londra","No. 6 collaborations project",2000));
+        canciones.add(new Cancion("Boy with luv","BTS, Halsey","Map of the soul",2000));
+        canciones.add(new Cancion("Mi persona favorita","Alejandro Sanz, Camila Cabello","#ELDISCO",2000));
+        canciones.add(new Cancion("Circles","Pos Malone","Hollywood's Bleeding",2000));
+        canciones.add(new Cancion("Slide away","Miley Cyru","Slide away",2000));
         listenerDelControllerCancion.finish(canciones);
     }
 

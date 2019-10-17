@@ -1,10 +1,11 @@
 
 package com.example.whalemusic.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Genero {
+public class Genero implements Serializable {
 
     private String nombre;
     private Integer imagen;

@@ -35,7 +35,7 @@ public class FragmentDetalleCancion extends Fragment {
         textViewNombre.setText(cancionSeleccionada.getNombre());
         textViewArtista.setText(cancionSeleccionada.getArtista());
         textViewAlbum.setText(cancionSeleccionada.getAlbum());
-        textViewAño.setText(cancionSeleccionada.getAño());
+        textViewAño.setText(cancionSeleccionada.getAño().toString());
         return view;
     }
 

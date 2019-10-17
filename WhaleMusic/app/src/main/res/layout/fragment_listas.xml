@@ -12,60 +12,71 @@
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:src="@drawable/logo"
-        android:layout_margin="20dp"/>
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Elegidos por ti:"
+        android:text="Elegidos para ti:"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_margin="20dp"/>
+        android:layout_margin="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_height="200dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="30dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="5dp">
 
-            <CheckBox
-                android:id="@+id/FragmentListas_checkBox_uno"
-                style="@style/CheckBox"
-                tools:text="Género" />
+            <Button
+                android:id="@+id/fragmentListas_Button_pop"
+                android:background="@drawable/pop"
+                android:text="Pop"
+                android:layout_marginHorizontal="5dp"
+                style="@style/Button"/>
 
-            <CheckBox
-                android:id="@+id/FragmentListas_checkBox_dos"
-                style="@style/CheckBox"
-                tools:text="Género"/>
+            <Button
+                android:id="@+id/fragmentListas_Button_rock"
+                android:background="@drawable/rock"
+                android:text="Rock"
+                android:layout_marginHorizontal="5dp"
+                style="@style/Button"/>
+
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="30dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="5dp">
 
-            <CheckBox
-                android:id="@+id/FragmentListas_checkBox_tres"
-                style="@style/CheckBox"
-                tools:text="Género" />
+            <Button
+                android:id="@+id/fragmentListas_Button_reggae"
+                android:background="@drawable/reggae"
+                android:text="Reggae"
+                android:layout_marginHorizontal="5dp"
+                style="@style/Button"/>
 
-            <CheckBox
-                android:id="@+id/FragmentListas_checkBox_cuatro"
-                style="@style/CheckBox"
-                android:text="Género" />
+            <Button
+                android:id="@+id/fragmentListas_Button_indie"
+                android:background="@drawable/indie"
+                android:text="Indie"
+                android:layout_marginHorizontal="5dp"
+                style="@style/Button"/>
+
         </LinearLayout>
     </LinearLayout>
         <TextView
@@ -75,14 +86,15 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_margin="10dp"/>
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/fragmentListasGeneros_recyclerView"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1">
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragmentListas_recyclerViewGeneros"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-</androidx.recyclerview.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,9 +102,10 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragmentListasArtistas_recyclerView"
+        android:id="@+id/fragmentListas_recyclerViewArtistas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -105,9 +118,10 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragmentListasCanciones_recyclerView"
+        android:id="@+id/fragmentListas_recyclerViewCanciones"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">

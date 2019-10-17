@@ -6,9 +6,13 @@
     tools:context=".view.MainActivity"
     android:background="#333">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/mainActivity_contenedorFragments"/>
-
+    </ScrollView>
 </LinearLayout>

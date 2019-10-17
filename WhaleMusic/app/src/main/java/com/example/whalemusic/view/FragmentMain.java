@@ -45,7 +45,7 @@ public class FragmentMain extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View viewMainFragment = inflater.inflate(R.layout.fragment_main, container, false);
+        final View viewMainFragment = inflater.inflate(R.layout.frgament_main, container, false);
         encontrarVistas(viewMainFragment);
         checkBoxPop.setOnCheckedChangeListener(new Chk_class());
         checkBoxIndie.setOnCheckedChangeListener(new Chk_class());
